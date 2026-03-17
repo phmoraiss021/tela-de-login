@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+
+    <script>
+        function logar(){
+            const user = document.getElementById('user').value;
+            const senha = document.getElementById('pass').value;
+            const url = 'https://flamengo.netlify.app/';
+
+            if(user == 'phmorais' && senha == '123'){
+                location.href = url;
+                win.focus();
+            }else{
+                alert('Usuário e/ou senha incorretos!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <h1>Faça o login<br>E entre para ver sobre o Flamengo</h1>
+            <img src="flamengo.svg" class="imagem" alt="Futebol">
+        </div>
+        <div class="right">
+            <div class="card">
+                <img src="flamengo2.svg" class="flamengo" alt="Futebol2">
+                <h1>LOGIN</h1>
+                
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" id="user" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="pass" placeholder="Senha">
+                </div>
+                <button class="btn" onclick="logar()">Login</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
